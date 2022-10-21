@@ -248,9 +248,10 @@ body {
 	}
 }
 
-#about{
-    color: #fff
+#about {
+    color: #fff;
 }
+
 
 .intro-content ,arrow-nav {
 	position: absolute;
@@ -467,4 +468,16 @@ body {
 }
 .arrow-nav{
     color: #eeeeee;
+}
+
+h1{
+    color: #eeeeee;
+    text-align: center;
+}
+#about, #skills, #projects, #contact {
+	display: none;
+}
+
+.navigate{
+    padding: 35% 0 20% 0;
 }
