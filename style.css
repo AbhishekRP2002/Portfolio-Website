@@ -57,7 +57,34 @@ body {
     list-style: none;
     margin-left: 1.5rem;
     font-size: 1.3rem;
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px 10px;
 }
+
+.menu-items li > a {
+    color: rgb(243, 243, 243);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu-items li > a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 5px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.5s;
+    
+  }
+  
+  .menu-items li > a:hover::after, li > a.active-nav::after {
+    width: 100%;
+    background: rgb(243, 243, 243);
+  }
 
 .navbar a{
     color: rgb(243, 243, 243);
@@ -66,9 +93,9 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-.navbar a:hover{
+/* .navbar a:hover{
     color: #15fbcd;
-}
+} */
 
 @media (max-width: 768px){
     .navbar{
