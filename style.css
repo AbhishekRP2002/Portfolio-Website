@@ -14,6 +14,7 @@ body {
 	cursor: default;
 	width: 100%;
 	height: 100vh;
+    overflow: hidden;
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.5);
 }
@@ -526,7 +527,8 @@ h1{
     margin-top:25%;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, .5);
+    box-shadow: inset 0px 0px 2px rgba(255, 255, 255, .5);
+    border-radius: 10px;
   }
   .contact-wrapper {
     margin: auto 0;
@@ -565,10 +567,10 @@ h1{
   }
   
   .email-info {
-      margin-top: 20px;
+      margin-top: 50px;
   }
   
-  ::-webkit-input-placeholder { /* Chrome */
+  ::-webkit-input-placeholder { 
     font-family: 'Roboto', sans-serif;
   }
   
@@ -592,16 +594,33 @@ h1{
   
   .form-input:focus,
   textarea:focus{
-    outline: 1.5px solid #eeeeee;
+    outline: none;
   }
+
+
   
   .form-input,
   textarea {
     width: 100%;
-    border: 1px solid #bdbdbd;
+    outline: none;
     border-radius: 5px;
+    color: #eeeeee;
   }
   
+
+  .form-input{
+    background-color: transparent;
+  }
+
+  #message{
+    background-color: transparent;
+    color: #eeeeee;
+    outline:none;
+  }
+
+::placeholder {
+    color: white;
+  }
   .wrapper > * {
     padding: 1em;
   }
@@ -673,7 +692,7 @@ h1{
   /* Footer section */
   .footer{
     background:none;
-    margin-top:38px;
+    margin-top:40px;
     padding:30px 0px;
     font-family: 'Play', sans-serif;
     text-align:center;
@@ -684,7 +703,7 @@ h1{
      /* margin:1% 0 0 0;  */
     padding:0.6% 0%;
     color:#fff;
-    font-size:1em;
+    font-size:0.7em;
     }
     
     .footer .row a{
