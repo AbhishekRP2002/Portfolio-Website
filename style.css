@@ -20,33 +20,57 @@ body {
 }
 
 /* Nav bar section */
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines{
-    display: none;
+.navbar {
+  background-color:#000;
+}
+nav {
+  height:130px;
+  top: 10px;
+}
+.navbar-nav {
+  margin:auto;
+}
+.nav-link {
+  margin:10px 25px;
+  color:#fff;
+  font-size: 25px;
+  font-weight: 200;
 }
 
-.container{
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: rgb(243, 243, 243);
+}
+.nav-link:hover{
+  color: rgb(243, 243, 243);
 }
 
-.navbar{
-  
-    position: fixed;
-    width: 100%;
-    /* background: #fff; */
-    color: rgb(243, 243, 243);
-    opacity: 0.85;
-    z-index: 100;
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(247, 247, 247);
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 90%;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
-}
+
 
 .menu-items{
     order: 2;
@@ -87,125 +111,10 @@ body {
     background: rgb(243, 243, 243);
   }
 
-.navbar a{
-    color: rgb(243, 243, 243);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
 
-/* .navbar a:hover{
-    color: #15fbcd;
-} */
 
-@media (max-width: 768px){
-    .navbar{
-        opacity: 0.95;
-    }
 
-    .navbar-container input[type="checkbox"],
-    .navbar-container .hamburger-lines{
-        display: block;
-    }
 
-    .navbar-container{
-        display: block;
-        position: relative;
-        height: 64px;
-    }
-
-    .navbar-container input[type="checkbox"]{
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 30px;
-        top: 20px;
-        left: 20px;
-        z-index: 5;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .navbar-container .hamburger-lines{
-        display: block;
-        height: 28px;
-        width: 35px;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .navbar-container .hamburger-lines .line{
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: rgb(255, 255, 255);
-    }
-    
-    .navbar-container .hamburger-lines .line1{
-        transform-origin: 0% 0%;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .navbar-container .hamburger-lines .line2{
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .navbar-container .hamburger-lines .line3{
-        transform-origin: 0% 100%;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .navbar .menu-items{
-        padding-top: 100px;
-        background: rgb(243, 243, 243);
-        height: 100vh;
-        max-width: 300px;
-        transform: translate(-150%);
-        display: flex;
-        flex-direction: column;
-        margin-left: -40px;
-        padding-left: 40px;
-        transition: transform 0.5s ease-in-out;
-        /* box-shadow:  5px 0px 10px 0px rgb(31, 31, 31); */
-        overflow: scroll;
-    }
-
-    .navbar .menu-items li{
-        margin-bottom: 1.8rem;
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
-
-    .logo{
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 2.5rem;
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
-        transform: translateX(0);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
-        transform: rotate(45deg);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
-        transform: scaleY(0);
-    }
-
-    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
-        transform: rotate(-45deg);
-    }
-
-}
 
 @media (max-width: 500px){
     .navbar-container input[type="checkbox"]:checked ~ .logo{
@@ -510,243 +419,3 @@ h1{
     padding: 35% 0 20% 0;
 }
 
-/* Contact Form Ka CSS */
-
-
-
-.contain {
-    /* background-color: rgb(15, 15, 15); */
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    padding: 1em;
-  }
-  
-  div.form {
-    margin-top:25%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0px 0px 2px rgba(255, 255, 255, .5);
-    border-radius: 10px;
-  }
-  .contact-wrapper {
-    margin: auto 0;
-  }
-  
-  .submit-btn {
-    float: left;
-  }
-  .reset-btn {
-    float: right;
-  }
-  .form-headline , .contactHead{
-    color: #eeeeee;
-  }
-  
-  .form-headline:after {
-    content: "";
-    display: block;
-    width: 10%;
-    padding-top: 10px;
-    /* border-bottom: 3px solid #fff; */
-  }
-  
-  .highlight-text {
-    color: #eeeeee;
-  }
-  
-  .hightlight-contact-info {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.5;
-  }
-  
-  .highlight-text-grey {
-    font-weight: 500;
-  }
-  
-  .email-info {
-      margin-top: 50px;
-  }
-  
-  ::-webkit-input-placeholder { 
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .required-input {
-    color: #eeeeee;
-  }
-  @media (min-width: 600px) {
-    .contain {
-      padding: 0;
-    }
-  }
-  
-  h3,
-  ul {
-    margin: 0;
-  }
-  
-  h3 {
-    margin-bottom: 1rem;
-  }
-  
-  .form-input:focus,
-  textarea:focus{
-    outline: none;
-  }
-
-
-  
-  .form-input,
-  textarea {
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    color: #eeeeee;
-  }
-  
-
-  .form-input{
-    background-color: transparent;
-  }
-
-  #message{
-    background-color: transparent;
-    color: #eeeeee;
-    outline:none;
-  }
-
-::placeholder {
-    color: white;
-  }
-  .wrapper > * {
-    padding: 1em;
-  }
-  @media (min-width: 700px) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
-    .wrapper > * {
-      padding: 2em 2em;
-    }
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contacts {
-    color: #eeeeee;
-  }
-  
-  .form {
-    background: #fff;
-  }
-  
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  form label {
-    display: block;
-  }
-  form p {
-    margin: 0;
-  }
-  
-  .full-width {
-    grid-column: 1 / 3;
-  }
-  
-  button,
-  .submit-btn,
-  .form-input,
-  textarea {
-    padding: 1em;
-  }
-  
-  button, .submit-btn {
-    background: transparent;
-    border: 1px solid #eeeeee;
-    color: #eeeeee;
-    border-radius: 15px;
-    padding: 5px 20px;
-    text-transform: uppercase;
-  }
-  button:hover, .submit-btn:hover,
-  button:focus , .submit-btn:focus{
-    background: #eeeeee;
-    outline: 0;
-    color: rgb(19, 19, 19);
-  }
-  .error {
-    color: #eeeeee;
-  }
-  
-
-  /* Footer section */
-  .footer{
-    background:none;
-    margin-top:40px;
-    padding:30px 0px;
-    font-family: 'Play', sans-serif;
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
-     /* margin:1% 0 0 0;  */
-    padding:0.6% 0%;
-    color:#fff;
-    font-size:0.7em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:#fff;
-    padding: 0 10px;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:rgb(205, 205, 205);
-    }
-
-
-    @media (max-width:720px){
-        .footer{
-        text-align:left;
-        padding:5%;
-        }
-    }
-
-    /* About Page */
-
-
-  
-    .container-about {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    
-.about-title {
-        color: mix(#fff, #e91e63, 85%);
-        font-size: calc(1em + 20vw) ;  
-        font-weight: 900;
-    
-    }
-    
-    
