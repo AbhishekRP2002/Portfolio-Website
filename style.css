@@ -724,3 +724,29 @@ h1{
         padding:5%;
         }
     }
+
+    /* About Page */
+
+
+  
+    .container-about {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+.about-title {
+        color: mix(#fff, #e91e63, 85%);
+        font-size: calc(1em + 20vw) ;  
+        font-weight: 900;
+    
+    }
+    
+    
